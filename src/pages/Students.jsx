@@ -16,6 +16,12 @@ const infoList = [
     image: `${process.env.PUBLIC_URL}/images/tommy.jpg`,
     url: 'https://officeswitch.amebaownd.com',
   },
+  {
+    title: 'Nobu',
+    contents: '本ホームページを作成しているエンジニアの紹介サイトです。',
+    image: `${process.env.PUBLIC_URL}/images/nobu.png`,
+    url: 'https://nobu17.github.io/Nobus_portfolio',
+  },
 ]
 
 const getStudentPanel = ({ title, contents, image, url, index }) => {
