@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { Card, CardContent, Box, makeStyles } from '@material-ui/core'
+import LineBreakP from '../common/LineBreakP'
 
 const useStyles = makeStyles(() => ({
   post_date: {
-    fontSize: '20px',
+    fontSize: 19,
     textAlign: 'left',
     marginBottom: -35,
   },
@@ -13,10 +14,9 @@ const useStyles = makeStyles(() => ({
     borderBottom: '3px solid #4169e1',
   },
   contents: {
-    fontSize: 20,
-    lineHeight: 0.9,
+    fontSize: 17,
     letterSpacing: 0.2,
-    marginLeft: 20,
+    marginLeft: 15,
     textAlign: 'left',
     overflowWrap: 'break-word',
   },
@@ -30,7 +30,7 @@ export default function NewsBox({ title, postDate, contents }) {
         <CardContent>
           <p className={classes.post_date}>{postDate}</p>
           <p className={classes.title}>{title}</p>
-          <p className={classes.contents}>{contents}</p>
+          <LineBreakP className={classes.contents} strings={contents}></LineBreakP>
         </CardContent>
       </Card>
     </Box>
