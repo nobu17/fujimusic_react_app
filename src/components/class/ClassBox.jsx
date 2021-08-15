@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
     borderBottom: '3px solid #4169e1',
   },
   contents: {
-    textAlign: 'center',
+    textAlign: 'left',
     overflowWrap: 'break-word',
   },
 }))
@@ -40,7 +40,7 @@ export default function ClassBox({ name, imageList, overview, lessonTime, place,
             </ImageList>
           </Hidden>
           <p className={classes.title}>案内</p>
-          <p className={classes.contents}>{overview}</p>
+          <LineBreakP className={classes.contents} strings={overview}></LineBreakP>
           <p className={classes.title}>レッスン時間</p>
           <LineBreakP className={classes.contents} strings={lessonTime}></LineBreakP>
           <p className={classes.title}>練習場所</p>
