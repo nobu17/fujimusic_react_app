@@ -16,6 +16,7 @@ import MenuIcon from '@material-ui/icons/Menu'
 import React, { useState, useEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { LogoutMenu, LogoutButton } from '../common/Logout'
+import { useAuth } from '../../contexts/AuthContext'
 
 const headersData = [
   {
@@ -42,6 +43,12 @@ const headersData = [
     label: '生徒紹介',
     href: '/students',
     icon: 'account_box',
+  },
+  {
+    label: '管理メニュー',
+    href: '/admin',
+    icon: 'lock',
+    isLocked: true,
   },
 ]
 
@@ -75,6 +82,7 @@ const useStyles = makeStyles(() => ({
 }))
 
 export default function Header() {
+  const { currentUser } = useAuth()
   const { header, logo, menuButton, toolbar, drawerContainer } = useStyles()
 
   const [state, setState] = useState({
@@ -148,7 +156,10 @@ export default function Header() {
   }
 
   const getDrawerChoices = (handleDrawerClose) => {
-    return headersData.map(({ label, href, icon }) => {
+    return headersData.map(({ label, href, icon, isLocked }) => {
+      if (isLocked && !currentUser) {
+        return
+      }
       return (
         <Link
           key={label}
@@ -183,7 +194,10 @@ export default function Header() {
   )
 
   const getMenuButtons = () => {
-    return headersData.map(({ label, href, icon }) => {
+    return headersData.map(({ label, href, icon, isLocked }) => {
+      if (isLocked && !currentUser) {
+        return
+      }
       return (
         <Button
           key={label}
