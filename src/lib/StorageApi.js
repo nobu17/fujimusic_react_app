@@ -4,7 +4,11 @@ import ImageUtil from './ImageUtil'
 export const uploadFile = async (dir, name, file) => {
   try {
     const storageRef = storage.ref(dir)
-    const snapshot = await storageRef.child(name).put(file)
+    // need to cache
+    const metadata = {
+      cacheControl: 'public,max-age=4000',
+    }
+    const snapshot = await storageRef.child(name).put(file, metadata)
     return snapshot.ref.getDownloadURL()
   } catch (err) {
     console.error('upload is fail', err)
