@@ -1,3 +1,4 @@
+import React from 'react'
 import { MenuItem, Icon, Button } from '@material-ui/core'
 import { useAuth } from '../../contexts/AuthContext'
 import { useHistory } from 'react-router-dom'

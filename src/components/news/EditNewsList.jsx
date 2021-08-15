@@ -1,6 +1,5 @@
 import * as React from 'react'
-import Typography from '@material-ui/core/Typography'
-import { Card, CardContent, Box, makeStyles, Button } from '@material-ui/core'
+import { Box, makeStyles, Button } from '@material-ui/core'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemText from '@material-ui/core/ListItemText'

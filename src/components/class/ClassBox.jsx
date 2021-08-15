@@ -1,5 +1,4 @@
-import * as React from 'react'
-import Typography from '@material-ui/core/Typography'
+import React from 'react'
 import LineBreakP from '../common/LineBreakP'
 import { Card, CardContent, Box, ImageList, ImageListItem, Hidden, makeStyles } from '@material-ui/core'
 

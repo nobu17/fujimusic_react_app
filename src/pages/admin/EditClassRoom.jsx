@@ -1,4 +1,5 @@
-import { useState } from 'react'
+/* eslint-disable no-undef */
+import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Card, CardHeader, CardContent, CardActions, TextField, Button, Box, makeStyles } from '@material-ui/core'
 import { useParams } from 'react-router-dom'
@@ -35,7 +36,7 @@ export default function EditClassRoom() {
   const history = useHistory()
   const { id } = useParams()
   const { classRoom, error, loading, uploading, post, changeImage, setNewValue } = useClassRoom(id)
-  const [message, setMessage] = useState('')
+  const [message] = useState('')
 
   if (error) {
     return displayError(error, 'データの読み込みに失敗しました。')

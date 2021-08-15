@@ -1,5 +1,5 @@
+import React from 'react'
 import { Route, BrowserRouter, Redirect, Switch } from 'react-router-dom'
-import logo from './logo.svg'
 import './App.css'
 import Home from './pages/Home'
 import Price from './pages/Price'

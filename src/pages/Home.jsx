@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+import React from 'react'
 import { Card, CardMedia, Box, Grid, Hidden, makeStyles } from '@material-ui/core'
 import AppealBox from '../components/home/ApprealBox'
 
@@ -127,7 +129,6 @@ const bottomLink = () => {
 }
 
 export default function Home() {
-  const classes = useStyles()
   return (
     <>
       {topImage()}

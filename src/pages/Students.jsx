@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+import React from 'react'
 import StudentCard from '../components/students/StudentCard'
 import Box from '@material-ui/core/Box'
 

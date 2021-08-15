@@ -1,4 +1,5 @@
-import { Card, CardMedia, Box, Grid, Hidden, makeStyles } from '@material-ui/core'
+import React from 'react'
+import { Grid, makeStyles } from '@material-ui/core'
 import PriceBox from '../components/price/PriceBox'
 
 const useStyles = makeStyles(() => ({
@@ -34,7 +35,6 @@ const overview = () => {
 }
 
 const price = () => {
-  const classes = useStyles()
   const prices = [
     {
       title: '入会金',

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import {
   AppBar,
   Toolbar,
@@ -150,12 +151,12 @@ export default function Header() {
     return headersData.map(({ label, href, icon }) => {
       return (
         <Link
+          key={label}
           {...{
             component: RouterLink,
             to: href,
             color: 'inherit',
             style: { textDecoration: 'none' },
-            key: label,
           }}
         >
           <MenuItem onClick={handleDrawerClose}>
@@ -185,8 +186,8 @@ export default function Header() {
     return headersData.map(({ label, href, icon }) => {
       return (
         <Button
+          key={label}
           {...{
-            key: label,
             color: 'inherit',
             to: href,
             component: RouterLink,

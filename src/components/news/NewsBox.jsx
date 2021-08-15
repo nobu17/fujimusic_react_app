@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Typography from '@material-ui/core/Typography'
 import { Card, CardContent, Box, makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({

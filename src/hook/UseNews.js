@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+/* eslint-disable no-unused-vars */
+import React, { useEffect, useState } from 'react'
 import { getLatesNewsList, postNews, deleteNews } from '../lib/NewsApi'
 
 export function useNews() {
@@ -48,7 +49,7 @@ export function useNews() {
     deleteById,
   }
 }
-export function usePostNews(news) {
+export function usePostNews() {
   const [error, setError] = useState()
   const [loading, setLoading] = useState(true)
 

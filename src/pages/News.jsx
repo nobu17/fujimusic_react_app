@@ -1,3 +1,4 @@
+import React from 'react'
 import { makeStyles } from '@material-ui/core'
 import NewsBox from '../components/news/NewsBox'
 import { useNews } from '../hook/UseNews'
@@ -15,31 +16,6 @@ const useStyles = makeStyles(() => ({
     color: 'red',
   },
 }))
-
-const displayError = (err, message) => {
-  const classes = useStyles()
-  console.error(err)
-  return (
-    <>
-      <p className={classes.error}>{message}</p>
-    </>
-  )
-}
-
-const newsList = () => {
-  const newsList = [
-    { title: 'タイトル1', postDate: '2021-02-02', contents: 'hogeeeee' },
-    { title: 'タイトル2', postDate: '2021-02-04', contents: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa' },
-  ]
-  return (
-    <>
-      <h2>お知らせ</h2>
-      {newsList.map((item, index) => (
-        <NewsBox key={index} title={item.title} postDate={item.postDateStr} contents={item.contents}></NewsBox>
-      ))}
-    </>
-  )
-}
 
 export default function News() {
   const classes = useStyles()
