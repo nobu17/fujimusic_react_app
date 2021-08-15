@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Box } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 export default function AdminMenu() {
   const adminMenus = [
@@ -21,7 +22,7 @@ export default function AdminMenu() {
       <h2>管理メニュー</h2>
       {adminMenus.map((menu, index) => (
         <Box m={1} key={index}>
-          <Button href={menu.link} variant="contained" color="primary" fullWidth>
+          <Button component={Link} to={menu.link} variant="contained" color="primary" fullWidth>
             {menu.title}
           </Button>
         </Box>
